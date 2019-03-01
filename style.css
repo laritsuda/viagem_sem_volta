@@ -8,7 +8,9 @@ body {
   font-family: "Lato", sans-serif;
 
 }
-
+nav {
+    opacity: 0.9; 
+}
 /* Header 
 .header-bg {
   background-color: #000000;

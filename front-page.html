@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<div class="container p-3 pt-5"></div>
 	<title>Viagem sem volta</title>
 
 <!--Linkando o Bootstrap 4 ao seu site -->
@@ -41,7 +41,7 @@
 
 <body>
 
-<!--MENU-->	
+<!--MENU - First version
 <div id="mySidebar" class="sidebar">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <a href="#sobre">Sobre mim</a>
@@ -49,12 +49,56 @@
   <a href="#mapas">Mapas</a>
   <a href="#">Contato</a>
 </div>
-<!-- TOGGLE SIDEBAR -->
+<!-- TOGGLE SIDEBAR 
 <div id="main">
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
+-->
+<!-- Navbar Second Version -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">ViagemSemVolta</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
 
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="brasil" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Brasil
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Final de semana (SP)</a>
+          <a class="dropdown-item" href="#">Viagens longas</a>
+        </div>
+      </li>
+
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Mundo
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Europa</a>
+          <a class="dropdown-item" href="#">America do Sul</a>
+        </div>
+      </li>
+
+ 	  <li class="nav-item">
+        <a class="nav-link" href="#mapas">Explorar mapa</a>
+      </li>
+
+       <li class="nav-item">
+        <a class="nav-link" href="#sobre">Sobre mim</a>
+      </li>
+
+      
+    </ul>
+  </div>
+</nav>	
 <!-- Header -->
 <header>
 
@@ -112,7 +156,7 @@
 <main>
 	<div class="container text-center">
 	<h1 class="main-text">Viagens</h1></div>
-<section id="viagens" class="pt-3 bg-white">
+<section id="brasil" class="pt-3 bg-white">
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-6 img-fluid">
@@ -152,10 +196,11 @@
 <!-- maps -->
 <main>
 <hr class="section-break bg-white">
-	<h1 class="main-text">Mapa</h1></div>
+<section id="mapas">
+<h1 class="main-text">Explorar mapa</h1></div>
 <div id="mapid"></div>
 <script type="text/javascript" src="leaflet.js"></script>
-
+</section>
 <!-- esse e o mapa fake -->
 <!--
 	<section id="mapas">
