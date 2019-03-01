@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Viagem sem volta</title>
+
+<!--Linkando o Bootstrap 4 ao seu site -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<!--Linkando o CSS externo ao seu site -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+ <!-- Linkando o Leaflet CSS ao site -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+ <!-- Leaflet's javaScript -->
+ <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+   crossorigin=""></script>
+
+
+<!-- Leaflet jQuery -->
+   <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+<!--Linkando fontes Google Fonts ao seu site -->
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+<!-- Linkando os ícones ao seu site -->
+
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-li
+	ne-icons.css">	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<!--MENU-->	
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="#sobre">Sobre mim</a>
+  <a href="#viagens">Viagens</a>
+  <a href="#mapas">Mapas</a>
+  <a href="#">Contato</a>
+</div>
+<!-- TOGGLE SIDEBAR -->
+<div id="main">
+<button class="openbtn" onclick="openNav()">☰</button>
+</div>
+
+
+<!-- Header -->
+<header>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+<div class="container text-center">
+	<h1 class="main-text">Viagem Sem Volta</h1></div>
+
+<!-- Option 1: Single photo
+<div class="container-fluid">	
+
+<div class="header img-fluid col-12 p-2 mt-2 mb-2">
+	<img src="img/wood_map.jpg" alt="Wood world map">
+	</div>
+
+</div> --> 
+
+<!-- Option 2: Bootstrap Carousel-->
+<div class="container-fluid col-md-10 offset-md-1 col-sm-3">
+<script type="text/javascript">
+	$('.carousel').carousel()
+</script>
+<div id="demo" class="carousel slide carousel-fade" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="4000">
+      <img src="./img/Carousel1.jpg" class="d-block w-100" alt="1">
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="./img/Carousel2.jpg" class="d-block w-100" alt="2">
+    </div>
+    <div class="carousel-item" data-interval="4000">
+      <img src="./img/Carousel3.jpg" class="d-block w-100" alt="3">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#demo" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#demo" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+
+</header>
+	<hr class="section-break bg-white">
+<!-- content -->
+<main>
+	<div class="container text-center">
+	<h1 class="main-text">Viagens</h1></div>
+<section id="viagens" class="pt-3 bg-white">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-6 img-fluid">
+			<img src="img/Foto1.jpg" alt="Foto1" class="image">
+			 <div class="overlay">
+    			<div class="ct-text">Hello World</div>
+ 			 </div>
+		</div>
+
+		<div class="col-6 my-auto">
+			<h3 class="p-5">Todas as viagens são sem volta. Nós nunca voltamos de uma viagem igual como nós éramos antes.
+	  		<br> Viajar é a forma mais prazerosa de adquirir sabedoria. Bora viajar!</h2>
+		</div>
+		
+	</div>
+</div>
+</section>
+
+<section class="pb-3 bg-white">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-6 my-auto">
+			<h3 class="p-5">Também podemos &rsquo;viajar&rsquo; na nossa própria cidade. Ou seja, tirar um tempo para passear, rever lugares favoritos e conhecer lugares novos.</h2>
+		</div>
+
+		<div class="col-6 img-fluid">
+			<img src="img/spbw.jpg" alt="SP"class="image">
+			<div class="overlay">
+    			<div class="ct-text">Hello World</div>
+ 			 </div>
+		</div>
+		
+	</div>
+</div>
+</section>
+</main>
+<!-- maps -->
+<main>
+<hr class="section-break bg-white">
+	<h1 class="main-text">Mapa</h1></div>
+<div id="mapid"></div>
+<script type="text/javascript" src="leaflet.js"></script>
+
+<!-- esse e o mapa fake -->
+<!--
+	<section id="mapas">
+		<div class="container text-center">
+	<h1 class="main-text">Mapas</h1></div>
+		<div class="mapa-fake container-fluid">
+			<a href="#"><img src="img/mapa_fake.png" alt="mapa fake"></a></div>
+		</div>
+	</section> -->
+</main>
+
+<!-- footer -->
+
+<!-- about me -->
+<hr class="section-break bg-white">
+<section id="sobre" class="pt-5 pb-5 bg-white">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-4 img-fluid">
+				
+				<img src="img/profile.jpg" class="float-right" alt="Perfil">
+				 
+			</div>
+
+			<div class="col-8">
+				<h1 class="main-text">Sobre mim</h1>
+				<p>Olá, sou uma apaixonada por mapas e amo viajar.
+				<br>Eu trabalho como geógrafa em tempo integral e tenho um tempo limitado para viajar.
+				<br>Após alguns anos, tenho achado difícil escolher um destino de viagem, porque o tempo é limitado, o dinheiro também, e eu sempre quero aproveitar ao máximo as minhas viagens. <br>Decidi criar este site para colecionar os lugares que eu já visitei, documentá-los e mapeá-los.
+				</p>
+			</div>
+		</div>
+	</div>
+		
+	</div>
+</section>
+
+<!-- contatos -->
+<footer class="bg-white">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-12">
+				<ul class="list-inline">
+
+					
+					<li class="list-inline-item p-3">
+					<a href="https://www.linkedin.com/in/larissatsuda/"><i class="icon-social-linkedin text-center text-dark"></i></a>
+					</li
+
+					<li class="list-inline-item p-3">
+					<a href="https://www.instagram.com/larainthesky/"><i class="icon-social-instagram text-center text-dark"></i></a>
+					</li>
+
+					<li class="list-inline-item p-3">
+					<a href="https://www.facebook.com/larissa.sayuri.12"><i class="icon-social-facebook text-center text-dark"></i></a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<hr class="section-break bg-white">
+	<h6 class="text-center">©2019 Larissa Tsuda - Todos os direitos preservados</h6>
+</footer>
+<!--<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+class="box">
+Mouse Over Me</div>-->
+
+<script type="text/javascript"src="main.js"></script>
+
+<!--the following 3 scripts are related to Bootstrap--> 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
